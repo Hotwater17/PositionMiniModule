@@ -1,0 +1,68 @@
+Removed Member From Class: ClassName=1_MCU Member=C7
+Removed Member From Class: ClassName=2_Sensors Member=C12
+Removed Member From Class: ClassName=1_MCU Member=R16
+Removed Member From Class: ClassName=1_MCU Member=R17
+Removed Member From Class: ClassName=4_Power Member=TP15
+Removed Member From Class: ClassName=3_Radio Member=TP16
+Change Component Comment : Designator=R23 Old Comment=2K2 New Comment=22K
+Change Component Comment : Designator=R3 Old Comment=10K New Comment=100K
+Change Component Comment : Designator=R4 Old Comment=10K New Comment=100K
+Change Component Comment : Designator=R22 Old Comment=10K New Comment=100K
+Change component parameters: Designator = "R3"; Footprint = "RESC0603(1608)_M"; UniqueID = "\VKVRUINT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100000.00 Ohm"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R4"; Footprint = "RESC0603(1608)_M"; UniqueID = "\HKRRHJEL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100000.00 Ohm"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R22"; Footprint = "RESC0603(1608)_M"; UniqueID = "\GWHAQKQS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100000.00 Ohm"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R23"; Footprint = "RESC0603(1608)_M"; UniqueID = "\YWCKTFBV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "22000.00 Ohm"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=1_MCU Member=Component C2 100nF
+Added Member To Class: ClassName=1_MCU Member=Component C4 18pF
+Added Member To Class: ClassName=2_Sensors Member=Component C6 10nF
+Added Member To Class: ClassName=2_Sensors Member=Component C8 100nF
+Added Member To Class: ClassName=2_Sensors Member=Component C9 100nF
+Added Member To Class: ClassName=2_Sensors Member=Component C11 10uF
+Added Member To Class: ClassName=4_Power Member=Component C13 10uF
+Added Member To Class: ClassName=4_Power Member=Component C14 100nF
+Added Member To Class: ClassName=4_Power Member=Component C16 10uF
+Added Member To Class: ClassName=4_Power Member=Component C17 100nF
+Added Member To Class: ClassName=4_Power Member=Component C19 100nF
+Added Member To Class: ClassName=1_MCU Member=Component R3 100K
+Added Member To Class: ClassName=1_MCU Member=Component R4 100K
+Added Member To Class: ClassName=1_MCU Member=Component R7 22R
+Added Member To Class: ClassName=1_MCU Member=Component R10 Jumper
+Added Member To Class: ClassName=1_MCU Member=Component R15 22R
+Added Member To Class: ClassName=3_Radio Member=Component R18 1K
+Added Member To Class: ClassName=1_MCU Member=Component TP3 SCK
+Added Member To Class: ClassName=1_MCU Member=Component TP5 MISO
+Added Member To Class: ClassName=1_MCU Member=Component TP8 RRST
+Added Member To Class: ClassName=1_MCU Member=Component TP10 IRQ
+Added Member To Class: ClassName=1_MCU Member=Component TP11 SDA
+Added Member To Class: ClassName=1_MCU Member=Component TP13 SCL
+Added Member To Class: ClassName=1_MCU Member=Component TP18 GND
+Added Member To Class: ClassName=3_Radio Member=Component TP20 RXOK
+Added Member To Class: ClassName=4_Power Member=Component TP21 3V3

@@ -1,0 +1,56 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc
+Date     : 22.04.2019
+Time     : 14:20:11
+
+Processing Rule : Clearance Constraint (Gap=0.19mm) (All),(All)
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-1(4.199mm,19.581mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-10(1.524mm,17.131mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-11(1.524mm,14.768mm) on Multi-Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-2(4.199mm,18.931mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-3(4.199mm,18.281mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-4(4.199mm,17.631mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-5(4.199mm,16.981mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-8(1.524mm,21.793mm) on Multi-Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-9(1.524mm,19.431mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Region (0 hole(s)) Top Layer 
+Rule Violations :11
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J1-10(1.524mm,17.131mm) on Top Layer And Pad J1-9(1.524mm,19.431mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J1-9(1.524mm,19.431mm) on Top Layer And Pad J1-8(1.524mm,21.793mm) on Multi-Layer 
+Rule Violations :2
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=1mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.4mm) (Air Gap=0.35mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Via (3.429mm,34.417mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Via (3.429mm,9.906mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Via (56.515mm,3.557mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Via (56.515mm,34.417mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm
+Rule Violations :4
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 17
+Waived Violations : 0
+Time Elapsed        : 00:00:01

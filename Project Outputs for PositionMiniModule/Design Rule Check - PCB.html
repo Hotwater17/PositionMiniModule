@@ -1,0 +1,375 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Hotwater\Documents\Altium\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22.04.2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">14:20:11</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc" class="file"><acronym title="C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc">C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">17</td></tr>
+</table>
+</td>
+</table><a name="ID2OLRCXTMZXBNC0LP2O4A0E5NUHNGPTKQ5NQP3HC2MRU4IEHVQKPN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTFLK5ZUWZVFADC34WPYDYBF05JTKHDVYIZ4LLZME1IBFLZPL1EMN">Clearance Constraint (Gap=0.19mm) (All),(All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2LED2ZQUYKTFHHFNAAHKX04ODIB3ZD1SNY4TBNNYIPLMVFYF3ZSG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0PKFEYJ3TLMJGVLNWGQRALVRBH1CDJHOUNJIMGM0FDGYAAV4N4MI">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJMLHJP3PIZCODCIC41GT1NW0HEYXLGV5I2YWAAGYP2GXRNYBJK0H">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQZWXTRTY4HTLDATMIQJK53GTHCQB0NRIBQ0II2GJX4LSE1EDQXYF">Width Constraint (Min=0.2mm) (Max=1mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKQYRT2LMHPS0CLIQU3ZTXNKBHLFCUCEP5NLKLYCGOJTFEIGLXN2">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.4mm) (Air Gap=0.35mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYVOEMVHG4OTDBTXRLI0WWRLJADB1JLGO3ITBR0OUNUM4DJUCECFN">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAUKKEF0F4EJLJLMZZEF2IREIVBYLYU0XULFPWCOBS1AVIFVFRTWJ">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDREB3Q1M0ONMPNISUV2YLA1UUO0ZWH1J5RQDVDJFEKR1B25YT1QI">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVSYJP4C1K2JWJTPAJJPNWT3XJHNU1OSHZHNF1YKVJMAZ2YGOXFCL">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">17</td>
+</tr>
+</table><br><a name="IDTFLK5ZUWZVFADC34WPYDYBF05JTKHDVYIZ4LLZME1IBFLZPL1EMN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.19mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1767.912mil|Location2.Y=1773.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1767.912mil|Location2.Y=1773.899mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-1(4.199mm,19.581mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1057.007mil|Location2.X=1062.993mil|Location1.Y=1671.455mil|Location2.Y=1677.442mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1057.007mil|Location2.X=1062.993mil|Location1.Y=1671.455mil|Location2.Y=1677.442mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-10(1.524mm,17.131mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1043.719mil|Location2.X=1049.706mil|Location1.Y=1578.444mil|Location2.Y=1584.43mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1043.719mil|Location2.X=1049.706mil|Location1.Y=1578.444mil|Location2.Y=1584.43mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-11(1.524mm,14.768mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1742.322mil|Location2.Y=1748.308mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1742.322mil|Location2.Y=1748.308mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-2(4.199mm,18.931mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1716.731mil|Location2.Y=1722.718mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1716.731mil|Location2.Y=1722.718mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-3(4.199mm,18.281mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1691.14mil|Location2.Y=1697.127mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1691.14mil|Location2.Y=1697.127mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-4(4.199mm,17.631mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1665.55mil|Location2.Y=1671.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.747mil|Location2.X=1141.734mil|Location1.Y=1665.55mil|Location2.Y=1671.537mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-5(4.199mm,16.981mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1043.719mil|Location2.X=1049.706mil|Location1.Y=1855.018mil|Location2.Y=1861.005mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1043.719mil|Location2.X=1049.706mil|Location1.Y=1855.018mil|Location2.Y=1861.005mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-8(1.524mm,21.793mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1057.007mil|Location2.X=1062.993mil|Location1.Y=1762.007mil|Location2.Y=1767.993mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1057.007mil|Location2.X=1062.993mil|Location1.Y=1762.007mil|Location2.Y=1767.993mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Pad J1-9(1.524mm,19.431mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.577mil|Location2.X=1056.564mil|Location1.Y=1864.351mil|Location2.Y=1870.338mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.577mil|Location2.X=1056.564mil|Location1.Y=1864.351mil|Location2.Y=1870.338mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.542mil|Location2.X=1056.529mil|Location1.Y=1569.075mil|Location2.Y=1575.062mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.542mil|Location2.X=1056.529mil|Location1.Y=1569.075mil|Location2.Y=1575.062mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.19mm) Between Area Fill (-1.951mm,16.556mm) (5.549mm,20.006mm) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0PKFEYJ3TLMJGVLNWGQRALVRBH1CDJHOUNJIMGM0FDGYAAV4N4MI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.236mil|Location2.X=1099.764mil|Location1.Y=1636.654mil|Location2.Y=1802.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.236mil|Location2.X=1099.764mil|Location1.Y=1636.654mil|Location2.Y=1802.795mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-10(1.524mm,17.131mm) on Top Layer And Pad J1-9(1.524mm,19.431mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.236mil|Location2.X=1099.764mil|Location1.Y=1727.205mil|Location2.Y=1876.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.236mil|Location2.X=1099.764mil|Location1.Y=1727.205mil|Location2.Y=1876.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-9(1.524mm,19.431mm) on Top Layer And Pad J1-8(1.524mm,21.793mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYVOEMVHG4OTDBTXRLI0WWRLJADB1JLGO3ITBR0OUNUM4DJUCECFN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1075.32mil|Location2.X=1194.68mil|Location1.Y=2295.32mil|Location2.Y=2414.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1075.32mil|Location2.X=1194.68mil|Location1.Y=2295.32mil|Location2.Y=2414.68mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Via (3.429mm,34.417mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1075.32mil|Location2.X=1194.68mil|Location1.Y=1330.32mil|Location2.Y=1449.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1075.32mil|Location2.X=1194.68mil|Location1.Y=1330.32mil|Location2.Y=1449.68mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Via (3.429mm,9.906mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.32mil|Location2.X=3284.68mil|Location1.Y=1080.359mil|Location2.Y=1199.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.32mil|Location2.X=3284.68mil|Location1.Y=1080.359mil|Location2.Y=1199.719mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Via (56.515mm,3.557mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.32mil|Location2.X=3284.68mil|Location1.Y=2295.32mil|Location2.Y=2414.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Hotwater\Documents\Altium\Projects\PositionMiniModule\PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.32mil|Location2.X=3284.68mil|Location1.Y=2295.32mil|Location2.Y=2414.68mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Via (56.515mm,34.417mm) from Top Layer to Bottom Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,18 @@
+Added Component: Designator=TP18(TP-SM-C-100)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "No Vendor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TP-SM-C-100"; VariantName = "[No Variations]"
+Added Component: Designator=TP19(TP-SM-C-100)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "No Vendor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TP-SM-C-100"; VariantName = "[No Variations]"
+Added Component: Designator=TP20(TP-SM-C-100)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "No Vendor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TP-SM-C-100"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=TP18-1
+Added Pin To Net: NetName=GND Pin=TP19-1
+Added Pin To Net: NetName=GND Pin=TP20-1
+Added Member To Class: ClassName=1_MCU Member=Component TP18 GND
+Added Member To Class: ClassName=1_MCU Member=Component TP19 GND
+Added Member To Class: ClassName=1_MCU Member=Component TP20 GND
